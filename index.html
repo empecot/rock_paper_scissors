@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Rock Paper Scissors</title>
+</head>
+<body>
+
+
+<button id="rock">Rock</button>
+<button id="paper">Paper</button>
+<button id="scissors">Scissor</button>
+
+<h1 id="winner"></h1>
+
+
+
+<script type="text/javascript">
+	/*var computerChoice = "scissors";*/
+	var userChoice;
+
+
+	document.getElementByID("rock").onclick = function(){
+		userChoice = "rock";
+		whoWon();	
+	}
+
+	document.getElementByID("paper").onclick = function(){
+		userChoice = "paper";
+		whoWon();	
+	}
+
+	document.getElementByID("scissors").onclick = function(){
+		userChoice = "scissors";
+		whoWon();	
+	}
+
+	function whoWon(){
+		if (userChoice === "rock"){
+			document.getElementByID('winner').innerHTML = "You Won!";
+		} else if (userChoice === "paper") {
+			document.getElementByID('winner').innerHTML = "You Lost";
+		} else {
+			document.getElementByID('winner').innerHTML = "Tie";
+		}
+	}
+	
+</script>
+</body>
+</html>
